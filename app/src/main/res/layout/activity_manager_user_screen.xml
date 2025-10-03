@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="@dimen/_10sdp"
+    tools:context="com.example.duan1_nhom4.screen.ComicStoreScreen">
+
+    <!-- Banner -->
+    <ImageView
+        android:id="@+id/bannerImage"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner3"
+        android:layout_alignParentTop="true"
+        android:contentDescription="Banner" />
+
+    <!-- Thanh menu + tìm kiếm -->
+    <RelativeLayout
+        android:id="@+id/managerUser_layoutNutBam"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/bannerImage"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#FFFFFF"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/managerUser_btnMenu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/bars_solid"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Menu" />
+
+        <ImageView
+            android:id="@+id/managerUser_btnTimKiem"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search_svgrepo_com"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tìm kiếm" />
+    </RelativeLayout>
+
+    <!-- Danh sách user -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/managerUser_rcUser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/managerUser_layoutNutBam"
+        android:layout_above="@id/managerUser_btnThemUser"
+        android:paddingTop="8dp"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false" />
+
+    <!-- Nút thêm user (floating) -->
+    <ImageView
+        android:id="@+id/managerUser_btnThemUser"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/addicon"
+        android:padding="12dp"
+        android:elevation="6dp"
+        android:contentDescription="Thêm user"
+        android:clickable="true"
+        android:focusable="true" />
+</RelativeLayout>

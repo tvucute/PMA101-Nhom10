@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context="com.example.duan1_nhom4.screen.PolicyScreen">
+    <RelativeLayout
+        android:id="@+id/policy_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chính sách &amp; Điều khoản"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/policy_header_layout"
+        android:layout_above="@id/policy_btnDaHieu"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:scrollbars="vertical">
+        <TextView
+            android:id="@+id/policy_tvDieuKhoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="#333333"
+            android:lineSpacingExtra="@dimen/_4sdp"
+            android:justificationMode="inter_word"
+            android:text="Đây là nơi hiển thị nội dung chi tiết về chính sách bảo mật, điều khoản sử dụng hoặc các quy định khác của ứng dụng. Nội dung này có thể rất dài, vì vậy việc đảm bảo khả năng đọc là cực kỳ quan trọng. Chúng ta sử dụng ScrollView để người dùng có thể cuộn qua toàn bộ văn bản một cách dễ dàng. \n\n Khoảng cách giữa các dòng (lineSpacingExtra) được điều chỉnh để văn bản không bị dính vào nhau. Việc căn đều hai bên (justificationMode) giúp văn bản trông gọn gàng và chuyên nghiệp hơn, tương tự như các tài liệu chính thức. \n\n Màu chữ được chọn là màu xám đen để tạo sự tương phản tốt trên nền xám nhạt của màn hình, giúp giảm mỏi mắt khi đọc trong thời gian dài. Đảm bảo rằng nội dung thực tế sẽ được load vào TextView này từ một nguồn nào đó (ví dụ: String resource hoặc từ API). \n\n Người dùng cần đọc kỹ các điều khoản này trước khi chấp nhận, vì vậy việc trình bày rõ ràng là ưu tiên hàng đầu. "
+            tools:text="Nội dung điều khoản ví dụ dài để test giao diện..."/>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/policy_btnDaHieu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:text="Đã hiểu và Đồng ý"
+        android:textSize="@dimen/_18ssp"
+        android:textColor="@android:color/white"
+        android:background="#2196F3"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:elevation="@dimen/_4sdp"
+        android:backgroundTint="@null"/>
+</RelativeLayout>

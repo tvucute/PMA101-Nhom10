@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:padding="12dp">
+
+    <!-- Nút quay lại -->
+    <ImageView
+        android:id="@+id/comicScreen_btnTroLaiii"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:padding="8dp"
+        android:src="@drawable/back_2_svgrepo_com"
+        android:background="@drawable/bg_circle_button"
+        android:layout_alignParentStart="true"
+        android:contentDescription="Quay lại"
+        android:elevation="6dp" />
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Truyện đã tải"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="#222222"
+        android:layout_toEndOf="@id/comicScreen_btnTroLaiii"
+        android:layout_alignBottom="@id/comicScreen_btnTroLaiii"
+        android:layout_marginStart="14dp"
+        android:letterSpacing="0.02"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Danh sách truyện đã tải -->
+    <ListView
+        android:id="@+id/listViewDownloaded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/comicScreen_btnTroLaiii"
+        android:layout_marginTop="20dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.8dp"
+        android:background="@drawable/bg_listview"
+        android:padding="6dp"
+        android:clipToPadding="false" />
+</RelativeLayout>

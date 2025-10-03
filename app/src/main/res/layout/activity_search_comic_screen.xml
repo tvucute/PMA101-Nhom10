@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:padding="@dimen/_20sdp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.duan1_nhom4.screen.SearchUserScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/back_2_svgrepo_com"
+            android:id="@+id/searchUser_btnTroLai"
+            android:layout_gravity="center_vertical"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15ssp"
+            android:hint="Nhập tên truyện hoặc tác giả"
+            android:id="@+id/searchUser_edTenNguoiDung"
+            android:maxLines="1"
+            android:layout_marginStart="@dimen/_10sdp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:id="@+id/searchUser_rcNguoiDung"/>
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Nút menu -->
+    <ImageView
+        android:id="@+id/setting_btnMenu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/bars_solid"
+        android:background="?attr/selectableItemBackgroundBorderless" />
+
+    <!-- Ảnh đại diện bo tròn -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/user"
+        android:scaleType="centerCrop"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"
+        android:cropToPadding="true" />
+
+    <!-- Tên người dùng -->
+    <TextView
+        android:id="@+id/setting_tvTenNguoiDung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên người dùng"
+        android:textColor="#222"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Mật khẩu hiển thị + nút ẩn/hiện -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFF"
+        android:elevation="2dp"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="4dp"
+        android:backgroundTint="#DDD"
+        android:clipToPadding="false">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mật khẩu:"
+            android:textColor="#555"
+            android:textSize="14sp"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/setting_tvMatKhau"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="********"
+            android:textColor="#000"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/setting_btnAnHien"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/eye_close_svgrepo_com"
+            />
+    </LinearLayout>
+
+    <!-- Nút đổi mật khẩu -->
+    <Button
+        android:id="@+id/setting_btnDoiMatKhau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đổi mật khẩu"
+        android:textColor="#FFF"
+        android:backgroundTint="#4CAF50"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:paddingVertical="12dp" />
+
+    <!-- Nút xem tất cả bình luận -->
+    <Button
+        android:id="@+id/btnXemTatCaBinhLuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xem tất cả bình luận"
+        android:textColor="#FFF"
+        android:backgroundTint="#2196F3"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:paddingVertical="12dp" />
+
+</LinearLayout>

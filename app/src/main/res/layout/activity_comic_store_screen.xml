@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    tools:context="com.example.duan1_nhom4.screen.ComicStoreScreen">
+
+    <!-- Thanh top: menu + tìm kiếm, ở trên cùng -->
+    <RelativeLayout
+        android:id="@+id/khoTruyen_layoutNutBam"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/khoTruyen_btnMenu"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/bars_solid"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Menu" />
+
+        <ImageView
+            android:id="@+id/khoTruyen_btnTimKiem"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/search_svgrepo_com"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tìm kiếm" />
+    </RelativeLayout>
+
+    <!-- Banner chạy tự động bằng ViewPager2 -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/bannerViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@id/khoTruyen_layoutNutBam" />
+
+    <!-- Các chấm chỉ báo vị trí banner -->
+    <LinearLayout
+        android:id="@+id/bannerIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/bannerViewPager"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" />
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/khoTruyen_tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📚 Truyện của bạn"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1A237E"
+        android:layout_below="@id/bannerViewPager"
+        android:layout_marginTop="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp" />
+
+    <!-- Danh sách truyện -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/khoTruyen_rcTruyen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/khoTruyen_tvTitle"
+        android:layout_above="@id/khoTruyen_btnThemTruyen"
+        android:layout_marginTop="10dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false" />
+
+    <!-- Nút thêm truyện (Floating) -->
+    <ImageView
+        android:id="@+id/khoTruyen_btnThemTruyen"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/addicon"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:padding="12dp"
+        android:elevation="6dp"
+        android:backgroundTint="#3F51B5"
+        android:contentDescription="Thêm truyện"
+        android:clickable="true"
+        android:focusable="true" />
+</RelativeLayout>

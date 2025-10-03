@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp" android:background="#F5F5F5"> <LinearLayout
+    android:id="@+id/top_section_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="32dp"> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đăng Nhập"
+        android:textSize="32sp" android:textStyle="bold"
+        android:textColor="#212121" android:layout_marginEnd="8dp"/>
+    <ImageView
+        android:layout_width="32dp" android:layout_height="32dp"
+        android:src="@drawable/icon"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chào mừng bạn quay trở lại!"
+        android:textSize="18sp" android:textColor="#757575"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/middle_section_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/edtuser"
+            android:layout_width="match_parent"
+            android:layout_height="52dp" android:hint="Tên tài khoản"
+            android:textSize="17sp"
+            android:layout_marginTop="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:background="@drawable/design_editext"
+            android:textColor="#333333"
+            android:textColorHint="#BDBDBD"/> <EditText
+        android:id="@+id/edtpassword"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="Mật khẩu"
+        android:textSize="17sp"
+        android:inputType="textPassword"
+        android:layout_marginTop="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/design_editext"
+        android:textColor="#333333"
+        android:textColorHint="#BDBDBD"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_section_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/middle_section_layout"
+        android:layout_marginTop="32dp"> <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" android:background="@drawable/design_button_primary" android:elevation="4dp" android:text="Đăng nhập"
+        android:textColor="@android:color/white"
+        android:textSize="19sp" app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btnregister"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/design_button_secondary" android:elevation="2dp"
+            android:text="Đăng ký"
+            android:textColor="#2196F3" android:textSize="19sp"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+</RelativeLayout>
