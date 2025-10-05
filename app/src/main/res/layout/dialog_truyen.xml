@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/dialog_background">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/truyenDialog_tvTenDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm Truyện"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#333"/>
+
+    <!-- Nội dung nhập cuộn được -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/truyenDialog_edTenTruyen"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Tên truyện"
+                android:background="@drawable/design_editext"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/truyenDialog_edTacGia"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Tác giả"
+                android:background="@drawable/design_editext"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"/>
+
+            <EditText
+                android:id="@+id/truyenDialog_edNoiDung"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Nội dung truyện"
+                android:gravity="top|start"
+                android:background="@drawable/design_editext"
+                android:padding="16dp"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"/>
+
+            <!-- Bổ sung thêm trường này để nhập URL ảnh bìa -->
+
+
+            <!-- THÊM Button để chọn ảnh từ thiết bị -->
+            <Button
+                android:id="@+id/truyenDialog_btnChonAnh"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Chọn ảnh từ thư viện"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:background="@drawable/design_button"
+                android:layout_marginTop="12dp"/>
+
+            <!-- THÊM ImageView để hiển thị ảnh bìa -->
+            <ImageView
+                android:id="@+id/truyenDialog_imgAnhBia"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5sp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_add_image_placeholde"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Nút bấm -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/truyenDialog_btnDongY"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Thêm"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:background="@drawable/design_button"/>
+
+        <Button
+            android:id="@+id/truyenDialog_btnTuChoi"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Hủy"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:background="@drawable/design_button_cancel"
+            android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+</LinearLayout>

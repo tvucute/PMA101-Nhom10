@@ -1,6 +1,5 @@
 package com.vuntph53431.pma101_nhom10.dao;
 
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -151,4 +150,3 @@ public class TruyenDAO {
         }
     }
 }
-
