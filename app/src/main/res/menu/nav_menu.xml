@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/khoTruyen"
+        android:title="Kho Truyện" />
+    <item
+        android:id="@+id/quanLyNguoiDung"
+        android:title="Quản Lý Người Dùng" />
+    <item
+        android:id="@+id/dieuKhoanDichVu"
+        android:title="Điều Khoản Dịch Vụ" />
+    <item
+        android:id="@+id/caiDat"
+        android:title="Cài Đặt" />
+    <item
+        android:id="@+id/taixuong"
+        android:title="Mục tải " />
+
+    <item
+        android:id="@+id/dangXuat"
+        android:title="Đăng Xuất" />
+
+    <item
+        android:id="@+id/thoat"
+        android:title="Thoát" />
+</menu>

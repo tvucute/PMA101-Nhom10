@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:padding="12dp"
+    android:background="@drawable/design_item"
+    android:elevation="2dp">
+
+    <!-- Logo truyện -->
+    <ImageView
+        android:id="@+id/khoTruyen_imgLogoTruyen"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iconbook"
+        android:background="@drawable/circle_background"
+        android:padding="6dp"/>
+
+    <!-- Thông tin truyện -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@id/khoTruyen_imgLogoTruyen"
+        android:layout_toStartOf="@id/khoTruyen_layoutNutBam"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
+
+        <TextView
+            android:id="@+id/khoTruyen_tvTenTruyen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tên Truyện"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/khoTruyen_tvTacGia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tác giả"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="6dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+    </LinearLayout>
+
+    <!-- Nút thao tác -->
+    <LinearLayout
+        android:id="@+id/khoTruyen_layoutNutBam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/khoTruyen_btnXoatruyen"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/deleteicon"
+            android:padding="2dp"
+            android:contentDescription="Xóa"/>
+
+        <ImageView
+            android:id="@+id/khoTruyen_btnSuaTruyen"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/updateicon"
+            android:padding="2dp"
+            android:contentDescription="Sửa"/>
+    </LinearLayout>
+
+</RelativeLayout>
